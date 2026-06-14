@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9d0d9b9-692e-4f19-ade3-5e0bd21b5257" name="Changes" comment="" />
+    <list default="true" id="c9d0d9b9-692e-4f19-ade3-5e0bd21b5257" name="Changes" comment="chore: initialize spring boot project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,11 +212,47 @@
       <option name="presentableId" value="Default" />
       <updated>1781437131487</updated>
       <workItem from="1781437132759" duration="1969000" />
-      <workItem from="1781439130430" duration="463000" />
+      <workItem from="1781439130430" duration="786000" />
     </task>
+    <task id="LOCAL-00001" summary="chore: initialize spring boot project">
+      <option name="closed" value="true" />
+      <created>1781439743516</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1781439743516</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: initialize spring boot project" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: initialize spring boot project" />
   </component>
 </project>
