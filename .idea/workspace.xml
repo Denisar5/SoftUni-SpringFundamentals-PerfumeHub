@@ -4,11 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9d0d9b9-692e-4f19-ade3-5e0bd21b5257" name="Changes" comment="chore: initialize spring boot project" />
+    <list default="true" id="c9d0d9b9-692e-4f19-ade3-5e0bd21b5257" name="Changes" comment="chore: create project package structure">
+      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/entity/Perfume.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/enums/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/enums/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/enums/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6230436d-420a-43fd-8ebb-d70d784d50f4/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,12 +37,12 @@
     &quot;assignee&quot;: &quot;Denisar5&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Denisar5/SoftUni-SpringFundamentals-PerfumeHub.git",
-    "accountId": "a67c450c-f184-4a7e-85c5-fc273072a37f"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Denisar5/SoftUni-SpringFundamentals-PerfumeHub.git&quot;,
+    &quot;accountId&quot;: &quot;a67c450c-f184-4a7e-85c5-fc273072a37f&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -33,47 +51,50 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="3F7rpZTvhn42XTmIk59yYfj8Z3I" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.PerfumeHubApplication.executor": "Run",
-    "Spring Boot.PerfumehubApplication.executor": "Run",
-    "Spring Boot.RootApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.PerfumeHubApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PerfumehubApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RootApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\denis\IdeaProjects\untitled\SoftUni-SpringFundamentals-PerfumeHub\.idea\root\src\main\java\com\denisar5\perfumehub" />
@@ -212,7 +233,9 @@
       <option name="presentableId" value="Default" />
       <updated>1781437131487</updated>
       <workItem from="1781437132759" duration="1969000" />
-      <workItem from="1781439130430" duration="786000" />
+      <workItem from="1781439130430" duration="1008000" />
+      <workItem from="1781556291957" duration="114000" />
+      <workItem from="1781600803240" duration="1144000" />
     </task>
     <task id="LOCAL-00001" summary="chore: initialize spring boot project">
       <option name="closed" value="true" />
@@ -222,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781439743516</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="chore: create project package structure">
+      <option name="closed" value="true" />
+      <created>1781440044792</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1781440044792</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +284,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: initialize spring boot project" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: initialize spring boot project" />
+    <MESSAGE value="chore: create project package structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: create project package structure" />
   </component>
 </project>
