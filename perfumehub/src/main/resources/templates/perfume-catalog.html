@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PerfumeHub | Catalog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="container my-5">
+    <h2 class="mb-4">Perfume Catalog</h2>
+
+    <div class="row g-4">
+        <div class="col-md-3" th:each="perfume : ${perfumes}">
+            <div class="product-card">
+                <img th:src="${perfume.imageUrl}" alt="Perfume image" class="product-img">
+
+                <div class="product-body">
+                    <h5 th:text="${perfume.name}">Perfume Name</h5>
+                    <p class="brand" th:text="${perfume.brand}">Brand</p>
+                    <p>
+                        <span th:text="${perfume.volumeMl}">100</span> ml |
+                        <span th:text="${perfume.gender}">UNISEX</span>
+                    </p>
+                    <h5 class="price">
+                        €<span th:text="${perfume.price}">99.99</span>
+                    </h5>
+
+                    <a th:href="@{/perfumes/{id}(id=${perfume.id})}" class="btn btn-outline-dark w-100">
+                        View Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>
