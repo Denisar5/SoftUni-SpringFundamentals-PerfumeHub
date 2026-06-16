@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9d0d9b9-692e-4f19-ade3-5e0bd21b5257" name="Changes" comment="chore: create project package structure">
-      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/entity/Perfume.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/enums/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/enums/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/perfumehub/src/main/java/com/denisar5/perfumehub/model/enums/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6230436d-420a-43fd-8ebb-d70d784d50f4/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c9d0d9b9-692e-4f19-ade3-5e0bd21b5257" name="Changes" comment="feat: add core domain entities" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -235,7 +225,7 @@
       <workItem from="1781437132759" duration="1969000" />
       <workItem from="1781439130430" duration="1008000" />
       <workItem from="1781556291957" duration="114000" />
-      <workItem from="1781600803240" duration="1144000" />
+      <workItem from="1781600803240" duration="1860000" />
     </task>
     <task id="LOCAL-00001" summary="chore: initialize spring boot project">
       <option name="closed" value="true" />
@@ -253,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781440044792</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add core domain entities">
+      <option name="closed" value="true" />
+      <created>1781602055301</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1781602055301</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +283,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: initialize spring boot project" />
     <MESSAGE value="chore: create project package structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: create project package structure" />
+    <MESSAGE value="feat: add core domain entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add core domain entities" />
   </component>
 </project>
