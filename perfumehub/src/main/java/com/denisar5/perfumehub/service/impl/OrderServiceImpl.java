@@ -33,6 +33,44 @@ public class OrderServiceImpl implements OrderService {
         this.userRepository = userRepository;
     }
 
+
+    @Override
+    public List<Order> getAllOrders() {
+        return orderRepository.findAll();
+    }
+
+    @Override
+    public void completeOrder(UUID orderId) {
+        Order order = orderRepository.findById(orderId)
+                .orElseThrow(() -> new OrderNotFoundException("Order not found"));
+
+        if (order.getStatus() != OrderStatus.PENDING) {
+            throw new IllegalStateException("Only pending orders can be completed");
+        }
+
+        order.setStatus(OrderStatus.COMPLETED);
+
+        orderRepository.save(order);
+    }
+
+    @Override
+    public void cancelOrderByAdmin(UUID orderId) {
+        Order order = orderRepository.findById(orderId)
+                .orElseThrow(() -> new OrderNotFoundException("Order not found"));
+
+        if (order.getStatus() != OrderStatus.PENDING) {
+            throw new IllegalStateException("Only pending orders can be cancelled");
+        }
+
+        Perfume perfume = order.getPerfume();
+        perfume.setStockQuantity(perfume.getStockQuantity() + order.getQuantity());
+
+        order.setStatus(OrderStatus.CANCELLED);
+
+        perfumeRepository.save(perfume);
+        orderRepository.save(order);
+    }
+
     @Override
     public void createOrder(UUID perfumeId, UUID userId, Integer quantity) {
         Perfume perfume = perfumeRepository.findById(perfumeId)

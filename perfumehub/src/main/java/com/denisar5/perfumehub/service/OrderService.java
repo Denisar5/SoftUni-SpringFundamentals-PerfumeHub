@@ -8,6 +8,12 @@ import java.util.UUID;
 
 public interface OrderService {
 
+    List<Order> getAllOrders();
+
+    void completeOrder(UUID orderId);
+
+    void cancelOrderByAdmin(UUID orderId);
+
     void createOrder(UUID perfumeId, UUID userId, Integer quantity);
 
     List<Order> getOrdersForUser(UUID userId);
