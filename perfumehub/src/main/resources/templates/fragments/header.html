@@ -18,15 +18,36 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" th:href="@{/perfumes}">Perfumes</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/orders/my}">My Orders</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/admin/perfumes/add}">Add Perfume</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/admin/orders}">Admin Orders</a></li>
+                    <li class="nav-item" th:if="${session.user_id != null}">
+                        <a class="nav-link" th:href="@{/orders/my}">My Orders</a>
+                    </li>
+                    <li class="nav-item" th:if="${session.user_role != null and session.user_role.name() == 'ADMIN'}">
+                        <a class="nav-link" th:href="@{/admin/perfumes/add}">Add Perfume</a>
+                    </li>
+
+                    <li class="nav-item" th:if="${session.user_role != null and session.user_role.name() == 'ADMIN'}">
+                        <a class="nav-link" th:href="@{/admin/orders}">Admin Orders</a>
+                    </li>
                 </ul>
 
                 <div class="d-flex gap-2">
-                    <a class="btn btn-outline-dark btn-sm" th:href="@{/login}">Login</a>
-                    <a class="btn btn-dark btn-sm" th:href="@{/register}">Register</a>
-                    <a class="btn btn-outline-danger btn-sm" th:href="@{/logout}">Logout</a>
+                    <a class="btn btn-outline-dark btn-sm"
+                       th:if="${session.user_id == null}"
+                       th:href="@{/login}">
+                        Login
+                    </a>
+
+                    <a class="btn btn-dark btn-sm"
+                       th:if="${session.user_id == null}"
+                       th:href="@{/register}">
+                        Register
+                    </a>
+
+                    <a class="btn btn-outline-danger btn-sm"
+                       th:if="${session.user_id != null}"
+                       th:href="@{/logout}">
+                        Logout
+                    </a>
                 </div>
             </div>
         </div>
