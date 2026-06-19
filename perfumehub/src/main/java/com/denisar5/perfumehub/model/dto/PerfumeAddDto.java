@@ -11,30 +11,34 @@ import java.math.BigDecimal;
 @Setter
 public class PerfumeAddDto {
 
-    @NotBlank
-    @Size(min = 2, max = 60)
+    @NotBlank(message = "Name is required")
+    @Size(min = 2, max = 60, message = "Name must be between 2 and 60 characters")
     private String name;
 
-    @NotBlank
-    @Size(min = 2, max = 60)
+    @NotBlank(message = "Brand is required")
+    @Size(min = 2, max = 60, message = "Brand must be between 2 and 60 characters")
     private String brand;
 
-    @NotBlank
-    @Size(min = 10, max = 500)
+    @NotBlank(message = "Description is required")
+    @Size(min = 10, max = 500, message = "Description must be between 10 and 500 characters")
     private String description;
 
-    @Positive
+    @NotNull(message = "Price is required")
+    @DecimalMin(value = "1.00", message = "Price must be at least 1.00")
     private BigDecimal price;
 
-    @NotBlank
+    @NotBlank(message = "Image URL is required")
     private String imageUrl;
 
-    @NotNull
+    @NotNull(message = "Gender is required")
     private Gender gender;
 
-    @Positive
+    @NotNull(message = "Volume is required")
+    @Min(value = 10, message = "Volume must be at least 10 ml")
+    @Max(value = 500, message = "Volume must be at most 500 ml")
     private Integer volumeMl;
 
-    @PositiveOrZero
+    @NotNull(message = "Stock quantity is required")
+    @Min(value = 0, message = "Stock quantity cannot be negative")
     private Integer stockQuantity;
 }

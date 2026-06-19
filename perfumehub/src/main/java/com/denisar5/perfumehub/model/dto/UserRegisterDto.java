@@ -10,15 +10,15 @@ import lombok.Setter;
 @Setter
 public class UserRegisterDto {
 
-    @NotBlank
-    @Size(min = 3, max = 30)
+    @NotBlank(message = "Username is required")
+    @Size(min = 3, max = 30, message = "Username must be between 3 and 30 characters")
     private String username;
 
-    @NotBlank
-    @Email
+    @NotBlank(message = "Email is required")
+    @Email(message = "Enter a valid email")
     private String email;
 
-    @NotBlank
-    @Size(min = 5, max = 50)
+    @NotBlank(message = "Password is required")
+    @Size(min = 5, max = 50, message = "Password must be between 5 and 50 characters")
     private String password;
 }

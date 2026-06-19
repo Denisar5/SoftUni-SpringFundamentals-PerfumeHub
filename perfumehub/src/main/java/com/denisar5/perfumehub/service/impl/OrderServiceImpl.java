@@ -1,12 +1,10 @@
 package com.denisar5.perfumehub.service.impl;
 
+import com.denisar5.perfumehub.exception.*;
 import com.denisar5.perfumehub.model.entity.Order;
 import com.denisar5.perfumehub.model.entity.Perfume;
 import com.denisar5.perfumehub.model.entity.UserEntity;
 import com.denisar5.perfumehub.model.enums.OrderStatus;
-import com.denisar5.perfumehub.exception.InsufficientStockException;
-import com.denisar5.perfumehub.exception.OrderNotFoundException;
-import com.denisar5.perfumehub.exception.UnauthorizedActionException;
 import com.denisar5.perfumehub.repository.OrderRepository;
 import com.denisar5.perfumehub.repository.PerfumeRepository;
 import com.denisar5.perfumehub.repository.UserRepository;
@@ -74,10 +72,10 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void createOrder(UUID perfumeId, UUID userId, Integer quantity) {
         Perfume perfume = perfumeRepository.findById(perfumeId)
-                .orElseThrow(() -> new RuntimeException("Perfume not found"));
+                .orElseThrow(() -> new PerfumeNotFoundException("Perfume not found"));
 
         UserEntity user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new UserNotFoundException("User not found"));
 
         if (quantity == null || quantity < 1) {
             throw new IllegalArgumentException("Quantity must be at least 1");

@@ -1,5 +1,6 @@
 package com.denisar5.perfumehub.service.impl;
 
+import com.denisar5.perfumehub.exception.PerfumeNotFoundException;
 import com.denisar5.perfumehub.model.dto.PerfumeAddDto;
 import com.denisar5.perfumehub.model.dto.PerfumeEditDto;
 import com.denisar5.perfumehub.model.entity.Perfume;
@@ -69,6 +70,6 @@ public class PerfumeServiceImpl implements PerfumeService {
     public Perfume getPerfumeById(UUID id) {
         return perfumeRepository.findById(id)
                 .orElseThrow(() ->
-                        new RuntimeException("Perfume not found"));
+                        new PerfumeNotFoundException("Perfume not found"));
     }
 }

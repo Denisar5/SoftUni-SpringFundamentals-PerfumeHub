@@ -72,11 +72,12 @@ public class AdminPerfumeController {
     @PostMapping("/edit/{id}")
     public String edit(
             @PathVariable UUID id,
-            @Valid @ModelAttribute PerfumeEditDto dto,
-            BindingResult bindingResult
+            @Valid @ModelAttribute("perfumeEditDto") PerfumeEditDto dto,
+            BindingResult bindingResult,
+            Model model
     ) {
-
         if (bindingResult.hasErrors()) {
+            model.addAttribute("perfumeId", id);
             return "edit-perfume";
         }
 

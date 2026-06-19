@@ -1,5 +1,6 @@
 package com.denisar5.perfumehub.service.impl;
 
+import com.denisar5.perfumehub.exception.DuplicateUserException;
 import com.denisar5.perfumehub.model.dto.UserLoginDto;
 import com.denisar5.perfumehub.model.dto.UserRegisterDto;
 import com.denisar5.perfumehub.model.entity.UserEntity;
@@ -24,11 +25,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void register(UserRegisterDto userRegisterDto) {
         if (userRepository.existsByUsername(userRegisterDto.getUsername())) {
-            throw new RuntimeException("Username already exists");
+            throw new DuplicateUserException("Username already exists");
         }
 
         if (userRepository.existsByEmail(userRegisterDto.getEmail())) {
-            throw new RuntimeException("Email already exists");
+            throw new DuplicateUserException("Email already exists");
         }
 
         UserRole role = userRepository.count() == 0 ? UserRole.ADMIN : UserRole.USER;
