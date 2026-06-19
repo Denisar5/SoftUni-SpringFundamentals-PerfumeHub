@@ -3,6 +3,7 @@ package com.denisar5.perfumehub.service;
 import com.denisar5.perfumehub.model.dto.PerfumeAddDto;
 import com.denisar5.perfumehub.model.dto.PerfumeEditDto;
 import com.denisar5.perfumehub.model.entity.Perfume;
+import com.denisar5.perfumehub.model.enums.Gender;
 
 import java.util.List;
 import java.util.UUID;
@@ -18,4 +19,6 @@ public interface PerfumeService {
     List<Perfume> getAllPerfumes();
 
     Perfume getPerfumeById(UUID id);
+
+    List<Perfume> searchPerfumes(String search, String brand, Gender gender, String sort);
 }

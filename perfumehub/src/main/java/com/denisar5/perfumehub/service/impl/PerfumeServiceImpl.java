@@ -4,6 +4,7 @@ import com.denisar5.perfumehub.exception.PerfumeNotFoundException;
 import com.denisar5.perfumehub.model.dto.PerfumeAddDto;
 import com.denisar5.perfumehub.model.dto.PerfumeEditDto;
 import com.denisar5.perfumehub.model.entity.Perfume;
+import com.denisar5.perfumehub.model.enums.Gender;
 import com.denisar5.perfumehub.repository.PerfumeRepository;
 import com.denisar5.perfumehub.service.PerfumeService;
 import org.springframework.stereotype.Service;
@@ -71,5 +72,34 @@ public class PerfumeServiceImpl implements PerfumeService {
         return perfumeRepository.findById(id)
                 .orElseThrow(() ->
                         new PerfumeNotFoundException("Perfume not found"));
+    }
+
+    @Override
+    public List<Perfume> searchPerfumes(String search, String brand, Gender gender, String sort) {
+        if (search != null && !search.isBlank()) {
+            return perfumeRepository.findByNameContainingIgnoreCase(search.trim());
+        }
+
+        if (brand != null && !brand.isBlank()) {
+            return perfumeRepository.findByBrandContainingIgnoreCase(brand.trim());
+        }
+
+        if (gender != null) {
+            return perfumeRepository.findByGender(gender);
+        }
+
+        if ("priceAsc".equals(sort)) {
+            return perfumeRepository.findAllByOrderByPriceAsc();
+        }
+
+        if ("priceDesc".equals(sort)) {
+            return perfumeRepository.findAllByOrderByPriceDesc();
+        }
+
+        if ("newest".equals(sort)) {
+            return perfumeRepository.findAllByOrderByCreatedAtDesc();
+        }
+
+        return perfumeRepository.findAll();
     }
 }
