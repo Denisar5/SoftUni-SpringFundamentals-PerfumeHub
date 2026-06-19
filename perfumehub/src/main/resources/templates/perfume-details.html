@@ -32,9 +32,17 @@
 
             <form th:action="@{/orders/create/{id}(id=${perfume.id})}" method="post" class="mt-4">
                 <label for="quantity" class="form-label">Quantity</label>
-                <input id="quantity" name="quantity" type="number" min="1" value="1" class="form-control w-25 mb-3">
 
-                <button type="submit" class="btn btn-dark">Buy Now</button>
+                <input id="quantity"
+                       name="quantity"
+                       type="number"
+                       min="1"
+                       value="1"
+                       class="form-control w-25 mb-3">
+
+                <button type="submit" class="btn btn-dark">
+                    Buy Now
+                </button>
             </form>
         </div>
     </div>
